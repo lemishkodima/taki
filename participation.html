@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1ed">
+  <title>Участь у конференції — ТАКІ</title>
+  <link rel="icon" href="assets/taki-symbol.png">
+  <link rel="stylesheet" href="styles.css?v=20260922-4">
+  <script src="participation.js?v=20260922-4" defer></script>
+</head>
+<body>
+  <header class="shell participation-header">
+    <a class="brand" href="index.html" aria-label="ТАКІ — головна"><img src="assets/taki-logo.png" alt="ТАКІ — як треба, як ти"></a>
+    <a class="back-link" href="index.html#tickets">← До конференції</a>
+  </header>
+  <main class="shell participation-main">
+    <div class="section-label">Участь у конференції</div>
+    <h1>Зустрінемося<br>на ТАКІ.</h1>
+    <p class="participation-date">17 жовтня 2026 · 10:00<br>Київ, АртПричал</p>
+    <section class="consent-card" aria-labelledby="consent-title">
+      <h2 id="consent-title">Перед придбанням квитка</h2>
+      <p>Ознайомтеся з документами та підтвердьте свою згоду, щоб перейти до придбання квитка.</p>
+      <form id="consent-form">
+        <div class="consent-row">
+          <input type="checkbox" id="legal-consent" name="legal-consent" required aria-labelledby="consent-label">
+          <div id="consent-label"><label for="legal-consent">Я ознайомився(-лась) та погоджуюся з </label><a href="assets/documents/public-offer.pdf" target="_blank" rel="noopener">Публічною офертою</a> та <a href="assets/documents/privacy-policy.pdf" target="_blank" rel="noopener">Політикою конфіденційності</a>.</div>
+        </div>
+        <button class="btn btn-yellow" type="submit">Продовжити</button>
+      </form>
+      <noscript><p>Увімкніть JavaScript у браузері, щоб підтвердити згоду та продовжити.</p></noscript>
+      <section id="purchase-contacts" class="purchase-contacts" hidden aria-labelledby="purchase-title">
+        <h2 id="purchase-title" tabindex="-1">Придбати квиток</h2>
+        <p>Зв’яжіться з організаторкою Ольгою для придбання квитка на конференцію.</p>
+        <div class="purchase-actions"><a class="btn btn-dark" href="tel:+380663194255">066 319 42 55 · Ольга</a><a class="btn btn-dark" href="https://t.me/taki_education" target="_blank" rel="noopener noreferrer">Написати в Telegram</a></div>
+      </section>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="shell legal-footer" aria-label="Документи">
+      <h2>Документи</h2>
+      <div class="legal-document"><a href="assets/documents/public-offer.pdf" target="_blank" rel="noopener">Публічна оферта</a><a href="assets/documents/public-offer.pdf" download="ТАКІ — Публічна оферта.pdf" aria-label="Завантажити Публічну оферту у PDF">Завантажити PDF ↓</a></div>
+      <div class="legal-document"><a href="assets/documents/privacy-policy.pdf" target="_blank" rel="noopener">Політика конфіденційності</a><a href="assets/documents/privacy-policy.pdf" download="ТАКІ — Політика конфіденційності.pdf" aria-label="Завантажити Політику конфіденційності у PDF">Завантажити PDF ↓</a></div>
+    </div>
+  </footer>
+</body>
+</html>

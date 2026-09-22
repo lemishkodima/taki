@@ -1,11 +1,7 @@
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const mobileNav = document.querySelector('[data-mobile-nav]');
-const modal = document.querySelector('[data-modal]');
 const progressBar = document.querySelector('[data-progress]');
-let modalTrigger;
-let savedOverflow = '';
-let backgroundState = [];
 
 function updatePage() {
   header?.classList.toggle('scrolled', window.scrollY > 8);
@@ -46,42 +42,10 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-function openModal(event) {
-  if (!modal) return;
-  modalTrigger = event.currentTarget;
-  modal.querySelector('#modal-title').textContent = 'Участь у конференції в Києві';
-  modal.querySelector('[data-ticket-message]').textContent = 'Щоб придбати квиток, зв’яжіться з організаторкою Ольгою. Конференція відбудеться 17 жовтня о 10:00.';
-  savedOverflow = document.body.style.overflow;
-  backgroundState = [...document.querySelectorAll('body > header, body > main, body > footer')].map(el => [el, el.inert]);
-  backgroundState.forEach(([el]) => { el.inert = true; });
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  modal.querySelector('.modal-close').focus();
-}
-function closeModal() {
-  if (!modal?.classList.contains('open')) return;
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = savedOverflow;
-  backgroundState.forEach(([el, old]) => { el.inert = old; });
-  modalTrigger?.focus();
-}
-document.querySelectorAll('[data-buy-button]').forEach(btn => btn.addEventListener('click', openModal));
-document.querySelectorAll('[data-modal-close]').forEach(btn => btn.addEventListener('click', closeModal));
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    if (modal?.classList.contains('open')) closeModal();
-    else if (mobileNav?.classList.contains('open')) {
-      setMenu(false);
-      menuToggle.focus();
-    }
-  }
-  if (event.key === 'Tab' && modal?.classList.contains('open')) {
-    const focusable = [...modal.querySelectorAll('button, a[href], [tabindex="0"]')];
-    const first = focusable[0], last = focusable[focusable.length - 1];
-    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  if (event.key === 'Escape' && mobileNav?.classList.contains('open')) {
+    setMenu(false);
+    menuToggle.focus();
   }
 });
 const marquee = document.querySelector('[data-marquee] .ticker-track');
