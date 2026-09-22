@@ -110,7 +110,7 @@ button{color:inherit}
 .hero-photo-tile>.ref8-left{left:6.7%;top:46.2%;width:55.2%;height:30.4%;border-radius:999px;z-index:2}
 .hero-photo-tile>.ref8-left img{object-position:48% 50%!important}
 .hero-photo-tile>.ref8-right{left:68.2%;top:46.3%;width:31.8%;height:30.4%;border-radius:50%;z-index:2}
-.hero-photo-tile>.ref8-right img{object-position:50% 28%!important}
+.hero-photo-tile>.ref8-right img{object-position:50% 48%!important}
 
 /* ref-5.webp: only the lower-right photography is replaced; yellow TAKI artwork above stays intact */
 .audience-visual>.ref5-photo{left:51.5%;top:48.7%;right:0;bottom:0;border-radius:29% 0 0 0;z-index:1}
@@ -126,11 +126,11 @@ button{color:inherit}
 .taki-collage-photo.c5{left:73.78%;top:35.45%;width:16.7%;height:13.7%;border-radius:52% 52% 0 0/70% 70% 0 0}
 .taki-collage-photo.c7{left:23.78%;top:49.1%;width:16.7%;height:13.7%;border-radius:0 0 52% 52%/0 0 70% 70%}
 .taki-collage-photo.c9{left:57.12%;top:49.1%;width:16.7%;height:13.7%;border-radius:0 0 52% 52%/0 0 70% 70%}
-.taki-collage-photo.c1 img{object-position:48% 32%!important}
-.taki-collage-photo.c3 img{object-position:42% 50%!important}
+.taki-collage-photo.c1 img{object-position:50% 48%!important}
+.taki-collage-photo.c3 img{object-position:47% 50%!important}
 .taki-collage-photo.c5 img{object-position:50% 50%!important}
-.taki-collage-photo.c7 img{object-position:48% 35%!important}
-.taki-collage-photo.c9 img{object-position:50% 42%!important}
+.taki-collage-photo.c7 img{object-position:50% 72%!important}
+.taki-collage-photo.c9 img{object-position:68% 40%!important}
 
 
 

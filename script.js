@@ -51,7 +51,7 @@ function openModal(event) {
   modalTrigger = event.currentTarget;
   const format = modalTrigger.dataset.ticket === 'online' ? 'Онлайн-участь' : 'Офлайн-участь у Києві';
   modal.querySelector('#modal-title').textContent = format;
-  modal.querySelector('[data-ticket-message]').textContent = 'Щоб уточнити вартість та придбати квиток, зв’яжіться з організаторкою Ольгою. Конференція відбудеться 20 жовтня о 10:00.';
+  modal.querySelector('[data-ticket-message]').textContent = 'Щоб уточнити вартість та придбати квиток, зв’яжіться з організаторкою Ольгою. Конференція відбудеться 17 жовтня о 10:00.';
   savedOverflow = document.body.style.overflow;
   backgroundState = [...document.querySelectorAll('body > header, body > main, body > footer')].map(el => [el, el.inert]);
   backgroundState.forEach(([el]) => { el.inert = true; });
