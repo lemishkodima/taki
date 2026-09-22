@@ -50,7 +50,7 @@ function openModal(event) {
   if (!modal) return;
   modalTrigger = event.currentTarget;
   modal.querySelector('#modal-title').textContent = 'Участь у конференції в Києві';
-  modal.querySelector('[data-ticket-message]').textContent = 'Щоб уточнити вартість та придбати квиток, зв’яжіться з організаторкою Ольгою. Конференція відбудеться 17 жовтня о 10:00.';
+  modal.querySelector('[data-ticket-message]').textContent = 'Щоб придбати квиток, зв’яжіться з організаторкою Ольгою. Конференція відбудеться 17 жовтня о 10:00.';
   savedOverflow = document.body.style.overflow;
   backgroundState = [...document.querySelectorAll('body > header, body > main, body > footer')].map(el => [el, el.inert]);
   backgroundState.forEach(([el]) => { el.inert = true; });

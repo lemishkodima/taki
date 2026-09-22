@@ -146,13 +146,15 @@ button{color:inherit}
 .speakers-subtitle { font-size:24px; line-height:1.4; margin:14px 0 0; max-width:620px; }
 .speakers-intro>p { font-size:17px; line-height:1.7; margin:0 0 24px; color:#514b47; }
 .speaker-status { display:inline-block; font-size:14px; font-weight:600; border-bottom:2px solid var(--coral); padding-bottom:7px; }
-.speaker-defs { position:absolute; pointer-events:none; overflow:hidden; }
 .speaker-poster { background:#f0f1e5; border-radius:48px; padding:38px 22px 24px; }
 .speaker-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:12px; row-gap:42px; }
 .speaker-card { min-width:0; }
 .speaker-portrait { position:relative; width:100%; aspect-ratio:1; isolation:isolate; }
 .speaker-disc { position:absolute; z-index:0; left:11%; top:12%; width:78%; aspect-ratio:1; border-radius:50%; background:var(--speaker-color); }
-.speaker-cutout { position:absolute; z-index:1; inset:0; clip-path:url(#speaker-crop); }
+.speaker-cutout { position:absolute; z-index:1; inset:0; /* Self-contained mask avoids a cross-document SVG fragment reference. */
+  --portrait-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='white' d='M11 51V0H89V51A39 39 0 0 1 11 51Z'/%3E%3C/svg%3E");
+  -webkit-mask:var(--portrait-mask) center / 100% 100% no-repeat;
+  mask:var(--portrait-mask) center / 100% 100% no-repeat; }
 .speaker-cutout img { position:absolute; max-width:none; width:var(--portrait-width,90%); height:auto; left:var(--portrait-left,5%); top:var(--portrait-top,0%); filter:grayscale(1) contrast(1.04); }
 .speaker-kushnir { --portrait-width:112%; --portrait-left:-13%; --portrait-top:-3.5%; }
 .speaker-balganbaieva { --portrait-width:94%; --portrait-left:3%; --portrait-top:-2%; }
@@ -209,7 +211,10 @@ html { overflow-x:clip; }
 .ticket-live { background:var(--ink); color:white; }
 .ticket-format { font-size:14px; text-transform:uppercase; letter-spacing:.12em; font-weight:600; }
 .ticket-option h3 { font-size:32px; line-height:1.15; letter-spacing:-.04em; margin:24px 0 10px; }
-.ticket-price { font-size:17px; margin:0 0 24px; }
+.ticket-prices { display:flex; flex-wrap:wrap; gap:24px 48px; margin:24px 0 32px; }
+.ticket-price { margin:0; display:grid; gap:8px; }
+.ticket-price strong { font-size:clamp(28px,4vw,42px); line-height:1.15; color:var(--yellow); }
+.ticket-price span { font-size:15px; }
 .ticket-option ul { list-style:none; padding:0; margin:0 0 32px; width:100%; }
 .ticket-option li { border-top:1px solid currentColor; padding:14px 0; font-size:16px; line-height:1.5; }
 .ticket-option .btn { margin-top:auto; width:100%; }
