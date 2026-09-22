@@ -204,10 +204,9 @@ html { overflow-x:clip; }
 .tickets-heading .section-label { margin-bottom:24px; }
 .tickets-heading h2 { font-size:clamp(38px,4.6vw,64px); line-height:1.07; letter-spacing:-.045em; margin:0 0 20px; }
 .tickets-heading>p { font-size:18px; line-height:1.6; }
-.ticket-options { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.ticket-options { display:grid; grid-template-columns:1fr; max-width:760px; margin:0 auto; gap:24px; }
 .ticket-option { display:flex; flex-direction:column; align-items:flex-start; border:1.5px solid var(--ink); border-radius:34px; padding:40px; }
-.ticket-offline { background:var(--ink); color:white; }
-.ticket-online { background:var(--teal); }
+.ticket-live { background:var(--ink); color:white; }
 .ticket-format { font-size:14px; text-transform:uppercase; letter-spacing:.12em; font-weight:600; }
 .ticket-option h3 { font-size:32px; line-height:1.15; letter-spacing:-.04em; margin:24px 0 10px; }
 .ticket-price { font-size:17px; margin:0 0 24px; }
