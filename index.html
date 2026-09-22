@@ -7,7 +7,7 @@
   <meta name="description" content="Конференція ТАКІ — «Аутизм у 2026 році: що змінилося і як працювати сьогодні». 17 жовтня, Київ." />
   <title>ТАКІ — Конференція «Аутизм у 2026 році»</title>
   <link rel="icon" href="assets/taki-symbol.png" />
-  <link rel="stylesheet" href="styles.css?v=20260922-4" />
+  <link rel="stylesheet" href="styles.css?v=20260922-9" />
 </head>
 <body>
   <header class="site-header" data-header>
@@ -322,7 +322,13 @@
           <article class="ticket-option ticket-live reveal" id="conference-ticket">
             <span class="ticket-format">Участь наживо</span><h3>Зустрінемося в Києві</h3><div class="ticket-prices"><p class="ticket-price"><strong data-ticket-price>2500 грн</strong><span data-ticket-price-period>Вартість квитка до 1 жовтня</span></p></div>
             <ul><li>Конференція наживо в Києві</li><li>Лекції та практичні воркшопи</li><li>Запитання спікерам та обговорення</li><li>Знайомства й обмін досвідом з учасниками</li></ul>
-            <a class="btn btn-yellow" href="participation.html">Купити квиток</a>
+            <form action="participation.html" class="ticket-consent-form">
+              <button class="btn btn-yellow" type="submit">Купити квиток</button>
+              <div class="consent-row ticket-consent">
+                <input type="checkbox" id="legal-consent" required checked aria-labelledby="consent-label">
+                <div id="consent-label"><label for="legal-consent">Я ознайомився(-лась) та погоджуюся з </label><a href="assets/documents/public-offer.pdf" target="_blank" rel="noopener">Публічною офертою</a> та <a href="assets/documents/privacy-policy.pdf" target="_blank" rel="noopener">Політикою конфіденційності</a>.</div>
+              </div>
+            </form>
           </article>
         </div>
         <p class="tickets-closing">Один день, щоб краще розібратися в сучасних підходах, поставити свої запитання і зрозуміти, на що спиратися далі.</p>
@@ -364,11 +370,12 @@
             <div><span>Початок</span><strong>10:00</strong></div>
             <div><span>Локація</span><strong>АртПричал</strong></div>
           </div>
-          <a class="btn btn-dark location-cta" href="participation.html">Купити квиток</a>
+          <a class="btn btn-dark location-cta" href="#tickets">Купити квиток</a>
         </div>
         <div class="location-poster reveal">
           <div class="poster-top">КОНФЕРЕНЦІЯ ТАКІ · 2026</div>
-          <div class="poster-date">17<br><span>10</span></div>
+          <div class="poster-venue-photo"><img src="assets/photos/artprychal-venue.png" alt="АртПричал — вхід до галереї на набережній Дніпра" width="1920" height="745" loading="lazy" decoding="async"></div>
+          <div class="poster-date">17<span> / 10</span></div>
           <div class="poster-bottom">КИЇВ<br>АРТПРИЧАЛ</div>
         </div>
       </div>

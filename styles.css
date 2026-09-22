@@ -307,12 +307,27 @@ html { overflow-x:clip; }
 .consent-row input { flex:0 0 22px; width:22px; height:22px; margin:4px 0 0; accent-color:var(--ink); cursor:pointer; }
 .consent-row label { cursor:pointer; }
 .consent-row a { font-weight:600; }
+.ticket-consent-form > .btn { width:100%; }
+.ticket-consent { margin:20px 0 0; font-size:13px; line-height:1.7; }
+.ticket-consent input { accent-color:var(--yellow); }
+.ticket-consent a { color:var(--yellow); }
 .purchase-contacts { margin-top:32px; padding-top:28px; border-top:1px solid var(--line); }
 .purchase-contacts[hidden] { display:none; }
 .purchase-actions { display:flex; flex-wrap:wrap; gap:12px; }
 .participation-main .btn { white-space:normal; text-align:center; padding:14px 24px; }
 .consent-row input:focus-visible, .legal-footer a:focus-visible, .consent-row a:focus-visible { outline:3px solid var(--blue); outline-offset:4px; }
 @media(max-width:540px) { .participation-main { padding-top:32px; } .participation-header .brand { width:100px; } .purchase-actions .btn { width:100%; } }
+
+/* Venue photo stays circular at every card width. */
+.location-poster { display:flex; flex-direction:column; gap:24px; min-height:0; padding:29px; }
+.location-poster:after { display:none; }
+.location-poster:before { width:140px; height:180px; left:-65px; bottom:-80px; }
+.poster-venue-photo { position:relative; z-index:1; width:100%; max-width:360px; aspect-ratio:1; align-self:center; border:8px solid var(--yellow); border-radius:50%; overflow:hidden; margin:4px 0 10px; }
+.poster-venue-photo img { width:100%; height:100%; object-fit:cover; object-position:36% center; }
+.location-poster .poster-date { position:relative; left:auto; top:auto; transform:none; font-size:clamp(44px,5vw,64px); line-height:1; letter-spacing:-.05em; padding-right:140px; }
+.location-poster .poster-date span { font-size:.55em; white-space:nowrap; }
+.location-poster .poster-bottom { bottom:30px; font-size:16px; }
+@media(max-width:380px) { .location-poster { padding:22px; gap:20px; } .location-poster .poster-date { font-size:40px; padding-right:112px; } .location-poster .poster-bottom { right:22px; bottom:24px; font-size:14px; } }
 
 /* Thank-you page: continuation of the ticket enquiry. */
 .thank-you-main { padding-top:32px; }
