@@ -313,3 +313,14 @@ html { overflow-x:clip; }
 .participation-main .btn { white-space:normal; text-align:center; padding:14px 24px; }
 .consent-row input:focus-visible, .legal-footer a:focus-visible, .consent-row a:focus-visible { outline:3px solid var(--blue); outline-offset:4px; }
 @media(max-width:540px) { .participation-main { padding-top:32px; } .participation-header .brand { width:100px; } .purchase-actions .btn { width:100%; } }
+
+/* Thank-you page: continuation of the ticket enquiry. */
+.thank-you-main { padding-top:32px; }
+.thank-you-art { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+.thank-you-art span { display:grid; place-items:center; width:64px; height:64px; background:var(--teal); border-radius:50% 50% 0 50%; }
+.thank-you-art span:nth-child(2) { background:var(--yellow); border-radius:50%; font-size:30px; }
+.thank-you-art span:nth-child(3) { background:var(--coral); border-radius:0 50% 50% 50%; }
+.thank-you-intro { max-width:650px; font-size:18px; line-height:1.7; color:var(--muted); }
+.thank-you-main .consent-card h2 { margin:16px 0; }
+.thank-you-main .purchase-actions { margin-top:24px; }
+.thank-you-bottom { display:flex; flex-wrap:wrap; gap:20px 32px; margin-top:32px; }
