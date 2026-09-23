@@ -59,10 +59,8 @@ if (marquee) [...marquee.children].forEach(child => {
 // 1 October 2026, 00:00 Kyiv (UTC+03:00).
 function updateTicketPrice(now = new Date()) {
   const standardRate = now.getTime() >= Date.parse('2026-10-01T00:00:00+03:00');
-  const price = document.querySelector('[data-ticket-price]');
-  const period = document.querySelector('[data-ticket-price-period]');
-  if (price) price.textContent = standardRate ? '2800 грн' : '2500 грн';
-  if (period) period.textContent = standardRate ? 'Вартість квитка' : 'Вартість квитка до 1 жовтня';
+  document.querySelector('[data-rate="early"]')?.classList.toggle('price-active', !standardRate);
+  document.querySelector('[data-rate="standard"]')?.classList.toggle('price-active', standardRate);
 }
 updateTicketPrice();
 window.addEventListener('pageshow', () => updateTicketPrice());

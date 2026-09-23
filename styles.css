@@ -309,6 +309,7 @@ html { overflow-x:clip; }
 .consent-row label { cursor:pointer; }
 .consent-row a { font-weight:600; }
 .ticket-consent-form > .btn { width:100%; }
+.ticket-art img { height:auto; }
 .ticket-consent { margin:20px 0 0; font-size:13px; line-height:1.7; }
 .ticket-consent input { accent-color:var(--yellow); }
 .ticket-consent a { color:var(--yellow); }
