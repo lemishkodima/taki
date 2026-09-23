@@ -326,7 +326,7 @@ html { overflow-x:clip; }
 .location-poster:after { display:none; }
 .location-poster:before { width:140px; height:180px; left:-65px; bottom:-80px; }
 .poster-venue-photo { position:relative; z-index:1; width:100%; max-width:360px; aspect-ratio:1; align-self:center; border:8px solid var(--yellow); border-radius:50%; overflow:hidden; margin:4px 0 10px; }
-.poster-venue-photo img { width:100%; height:100%; object-fit:cover; object-position:36% center; }
+.poster-venue-photo img { width:100%; height:100%; object-fit:cover; object-position:center 35%; }
 .location-poster .poster-date { position:relative; left:auto; top:auto; transform:none; font-size:clamp(44px,5vw,64px); line-height:1; letter-spacing:-.05em; padding-right:140px; }
 .location-poster .poster-date span { font-size:.55em; white-space:nowrap; }
 .location-poster .poster-bottom { bottom:30px; font-size:16px; }
