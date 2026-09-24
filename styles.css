@@ -193,7 +193,7 @@ html { overflow-x:clip; }
 .audience h2 { font-size:clamp(32px,3.6vw,48px); line-height:1.15; }
 .audience-heading-secondary { display:block; margin-top:16px; font-size:.7em; line-height:1.3; font-weight:500; }
 .audience-tags span { font-size:13px; }
-.audience-message { padding:40px; border:1.5px solid var(--ink); border-radius:34px; background:var(--ink); color:var(--paper); box-shadow:var(--shadow); }
+.audience-message { padding:40px; border:1.5px solid var(--yellow); border-radius:34px; background:#fff; color:var(--ink); box-shadow:var(--shadow); }
 .audience-message img { width:180px; height:auto; margin-bottom:55px; }
 .audience-message p { font-size:clamp(28px,3.2vw,43px); line-height:1.15; letter-spacing:-.04em; font-weight:700; margin:0 0 38px; }
 .audience-message>span { display:inline-block; border:1px solid currentColor; padding:10px 18px; border-radius:99px; font-size:14px; }
