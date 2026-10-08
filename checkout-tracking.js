@@ -3,7 +3,7 @@ const paymentOrigin = 'https://secure.wayforpay.com';
 const trackCheckout = () => {
   try {
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'InitiateCheckout', { currency: 'UAH' });
+      window.fbq('track', 'InitiateCheckout');
     }
   } catch (_) { /* Analytics must never prevent payment. */ }
 };
@@ -18,8 +18,8 @@ document.querySelectorAll('a[data-payment-cta]').forEach(link => {
     navigating = true;
     event.preventDefault();
     trackCheckout();
-    // Give the asynchronous Pixel request a short head start, then always proceed.
-    window.setTimeout(() => { window.location.href = destination.href; }, 250);
+    // Let the asynchronous Pixel request leave the page before navigating away.
+    window.setTimeout(() => { window.location.href = destination.href; }, 1000);
   });
   window.addEventListener('pageshow', () => { navigating = false; });
 });
@@ -34,7 +34,7 @@ document.querySelectorAll('form.ticket-consent-form').forEach(form => {
     submitted = true;
     event.preventDefault();
     trackCheckout();
-    window.setTimeout(() => HTMLFormElement.prototype.submit.call(form), 250);
+    window.setTimeout(() => HTMLFormElement.prototype.submit.call(form), 1000);
   });
   window.addEventListener('pageshow', () => { submitted = false; });
 });
